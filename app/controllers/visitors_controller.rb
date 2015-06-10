@@ -1,6 +1,6 @@
 class VisitorsController < ApplicationController
   def index
-    @entry = Entry.new
     @user = @current_user || User.new
+    @entry = @user.entries.build
   end
 end
