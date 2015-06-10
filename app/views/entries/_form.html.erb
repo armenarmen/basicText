@@ -16,10 +16,18 @@
     <%= f.text_area :content %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <% if current_user.present? %>
+      <%= f.hidden_field :user_id, value: current_user.id  %>
+    <% else %>
+      <%= link_to 'Login', login_path, class: 'navbar-brand' %>
+      <br><br>
+      <%= render 'users/form' %>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>
+    <!-- Make so if current user is not present, a signup thing is created
+
+    and that it doesn't erase their shit. -->
   </div>
 <% end %>
