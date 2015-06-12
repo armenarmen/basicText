@@ -1,5 +1,3 @@
-
-
 <%= form_for(@entry) do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
@@ -13,13 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" >
     <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, autofocus: true, spellcheck: false %>
   </div>
   <div class="field">
-    <%= f.hidden_field :user_id, value: current_user.id  %>
-    
+    <% if @current_user.present? %>
+      <%= f.hidden_field :user_id, value: current_user.id  %>
+    <% else %>
+      FUCK PUT THE USER SHIT IN HERE
+    <% end %>  
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,0 +1,36 @@
+body {
+    background-color: #d0e4fe;
+}
+
+#entry_content {
+  /**/
+  background-color: yellow;
+  width: 100%;
+  height: 10em;
+  border:0px solid #000000;
+  resize: none;
+  color: yellow;
+  outline: none;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  spellcheck='false';
+
+}
+
+#typing {
+  z-index:-1;
+  font-size: 5em;
+  position: absolute;
+  clear: both;
+  margin-top: 1em;
+  visibility: none;
+}
+
+#holder {
+  /*margin-top: 20em;*/
+  z-index: 0;
+}
+
