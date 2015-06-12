@@ -35,6 +35,7 @@ class EntriesController < ApplicationController
         format.json { render json: @entry.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PATCH/PUT /entries/1
