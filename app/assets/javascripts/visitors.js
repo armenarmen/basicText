@@ -19,3 +19,11 @@ $(document).ready(function() {
     $('#typing').css('z-index', 0)
   });
 });
+
+$().ready(function() {
+  // alert('page loaded');
+  $('#explanation').fadeIn();
+  $('#explanation').click(function() {
+    $('#explanation').fadeOut();
+  });
+});

@@ -34,3 +34,14 @@ body {
   z-index: 0;
 }
 
+.popup {
+  /*text-align: center;*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 60em;
+  background-color: red;
+  z-index: 1;
+  clear: both;
+  /*position: absolute;*/
+}
+
