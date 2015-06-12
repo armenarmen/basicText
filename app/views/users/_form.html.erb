@@ -1,4 +1,4 @@
-<% @user = current_user || @entry.user %>
+<% @user = @user || current_user || @entry.user %>
 
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
