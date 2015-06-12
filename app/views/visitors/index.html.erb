@@ -1,7 +1,8 @@
 <h3>Welcome</h3>
-<%= current_user.present? %>
+
 <div id="typing">Typing...</div>
-<div id="holder" onselectstart="return false;" onmousedown="return false;" focus="true;"> <!-- kills cmd-a -->
+<!-- kills cmd-a -->
+<div id="holder" onselectstart="return false;" onmousedown="return false;" focus="true;"> 
   <% if current_user.present? %>
     <%= render 'entries/form' %>
   <% else %>
