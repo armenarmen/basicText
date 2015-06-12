@@ -16,13 +16,10 @@
     <%= f.text_area :content, autofocus: true, spellcheck: false %>
   </div>
   <div class="field">
-    <% if @current_user.present? %>
-      <%= f.hidden_field :user_id, value: current_user.id  %>
-    <% else %>
-      FUCK PUT THE USER SHIT IN HERE
-    <% end %>  
+    <%= f.hidden_field :user_id, value: @user.id || current_user.id  %> 
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
