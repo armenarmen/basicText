@@ -1,5 +1,6 @@
 //  on click text area autofocus it, so that you can click back into it
 $(document).ready(function() {
+  $('#entry_content').focus();
   $("#entry_content").click(function() {
     $('#entry_content').focus();
   });
@@ -25,5 +26,6 @@ $().ready(function() {
   $('#explanation').fadeIn();
   $('#explanation').click(function() {
     $('#explanation').fadeOut();
+    $('#entry_content').focus();
   });
 });
