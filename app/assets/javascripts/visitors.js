@@ -16,6 +16,29 @@ ready = function() {
    }
   });
 
+  // Word count stuff
+  // $("#entry_content").keydown(function(event) {
+  //   var words = $(this).text();
+  //   // alert(words);
+  //   console.log(words);
+  // });
+
+
+  function wordCount( val ){
+    return {
+        words              : val.match(/\S+/g).length
+    }
+    }
+
+    $('#entry_content').on('input', function(){
+        
+      var c = wordCount( this.value );
+        
+      $('#count').html(c.words);
+      console.log(c.words); 
+    });
+
+
   // This makes typing fade in and out as a user types
   $('#entry_content').keydown(function(event) {
     $('#typing').fadeIn(10).fadeOut(100);

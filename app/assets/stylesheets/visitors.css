@@ -22,7 +22,7 @@ body {
 
 #typing {
   z-index:-1;
-  font-size: 5em;
+  font-size: 3em;
   position: absolute;
   clear: both;
   margin-top: 1em;
