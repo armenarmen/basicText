@@ -16,14 +16,8 @@ ready = function() {
    }
   });
 
-  // Word count stuff
-  // $("#entry_content").keydown(function(event) {
-  //   var words = $(this).text();
-  //   // alert(words);
-  //   console.log(words);
-  // });
 
-
+  // word count
   function wordCount( val ){
     return {
         words              : val.match(/\S+/g).length
