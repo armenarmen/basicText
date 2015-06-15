@@ -1,6 +1,7 @@
 class UserMailer < ApplicationMailer
 
   def welcome_email(user)
+    puts ">>>>>>>>>>>>>>>>>>>> welcome email"
     @user = user
     @url = 'http://example.com/login'
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
@@ -17,7 +18,7 @@ class UserMailer < ApplicationMailer
   #   # build the fucking views, loop over. 
   # end
   def entries_email(user)
-    puts "ass"
+    puts ">>>>>>>>>>>>>>>>>>>> entries email"
     @user = user
     @entries = @user.entries.group_by { |stuff| stuff.created_at.to_date }[Date.yesterday]
     if @entries.present?

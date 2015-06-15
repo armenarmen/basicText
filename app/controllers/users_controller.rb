@@ -30,7 +30,6 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        UserMailer.delay.welcome_email(@user)
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -46,6 +45,7 @@ class UsersController < ApplicationController
     puts ">>>>>>>>> IN USER UPDATE"
     respond_to do |format|
       if @user.update(user_params)
+        UserMailer.delay.welcome_email(@user)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
