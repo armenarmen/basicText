@@ -1,18 +1,7 @@
-<h3>Welcome</h3>
-
-<div class="popup" id="explanation" data-no-turbolinks>
-  
-  <h1>Ghost Writing</h1>
-  <p>
-    Lots of people self edit themselves to death their writing dying in the womb.
-  </p>
-  <p>
-    thats why I made this thing, so that a user can write without looking and as a result not be able to over edit too much.  
-  </p>
-  <p>
-    And every day you will be emailed the hsit htat you wrote the day before, raw and unedited. so taht you can see whats up and shit.
-  </p>
-
+<div class="page-header">
+  <h1>Write Now, Write Blind.</h1>
+  <p>Let it Mellow</p>
+  <h2>Read Later.</h2>
 </div>
 
 <div id="typing">Typing...</div>
@@ -20,29 +9,31 @@
 <div id="holder" onselectstart="return false;" onmousedown="return false;" focus="true;"> 
 
 
-<%= render 'entries/form' %>
-<span>word count: <span id="count"></span></span>
+  <%= render 'entries/form' %>
+  <span>word count: <span id="count">0</span></span>
 
 </div>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">What Is This?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">What Is This???</h4>
       </div>
       <div class="modal-body">
-        
+        <p>I had a problem when writing, I would edit and self sensor my self to death from the get go.  I asked friends of mine about this, and I was not alone.</p>
+
+        <p></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Send message</button> -->
       </div>
     </div>
   </div>
 </div>
+
+
 
 

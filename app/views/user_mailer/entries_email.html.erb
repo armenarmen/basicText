@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @user.name %>,</h1>
+    <p>
+      I hope that you have had time to let your writing from yesterday sink in!
+    </p>
+    <% @entries.each do |entry| %>
+      <p>
+        <%= entry.created_at %>
+        <hr>
+        <%= entry.content %>
+      </p>
+    <% end %>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>

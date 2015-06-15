@@ -16,6 +16,11 @@ ready = function() {
    }
   });
 
+  // modal stuff
+  // $(function() {
+  //   $("#myModal").modal();
+  //   $('#entry_content').focus();
+  // });
 
   // word count
   function wordCount( val ){
@@ -39,16 +44,16 @@ ready = function() {
     $('#typing').css('z-index', 0)
   });
 
-  // pop up the explanation stuff
-  $('#explanation').fadeIn();
-  $('#explanation').click(function() {
-    $('#explanation').fadeOut();
-    $('#entry_content').focus();
-  });
+  // // pop up the explanation stuff
+  // $('#explanation').fadeIn();
+  // $('#explanation').click(function() {
+  //   $('#explanation').fadeOut();
+  //   $('#entry_content').focus();
+  // });
 
 }; ////
 
 
-// stuff to work with rurbo links
+// stuff to work with turbo links
 $(document).ready(ready);
 $(document).on('page:load', ready);
