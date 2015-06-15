@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt'
 gem 'delayed_job_active_record'
+gem 'whenever', :require => false
 
 group :development, :test do
   gem 'byebug'
