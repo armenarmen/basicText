@@ -6,3 +6,7 @@ task :send_entries => :environment do
     UserMailer.entries_email(a)
   end
 end
+
+task :test_thing => :environment do
+  UserMailer.welcome_email(User.first)
+end
