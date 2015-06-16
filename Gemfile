@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bcrypt'
 gem 'delayed_job_active_record'
 gem 'whenever', :require => false
+gem 'mandrill-api'
 
 group :development, :test do
   gem 'byebug'
