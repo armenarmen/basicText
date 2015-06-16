@@ -8,6 +8,8 @@ task :send_entries => :environment do
   end
 end
 
-task :test_thing => :environment do
-  UserMailer.welcome_email(User.first)
+
+task :kill_fake_accts => :environment do
+  desc "destroys users that aren't real"
+  User.where("updated_at = created_at").where(name: nil).destroy_all
 end
