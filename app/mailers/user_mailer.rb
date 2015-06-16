@@ -22,7 +22,10 @@ class UserMailer < ApplicationMailer
     @user = user
     @entries = @user.entries.group_by { |stuff| stuff.created_at.to_date }[Date.yesterday]
     if @entries.present?
+      puts "there were some here"
       mail(to: @user.email, subject: 'Your Writings from yesterday!')
+    else
+      puts "no mails bro"
     end
   end
 
