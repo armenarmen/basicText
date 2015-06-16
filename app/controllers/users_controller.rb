@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   include SessionsHelper
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_filter :require_permission, only: :edit
 
   # GET /users
   # GET /users.json
@@ -11,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -75,5 +77,11 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation, entries_attributes: [:content, :user_id])
+    end
+
+    def require_permission
+      if current_user != User.find(params[:id])
+        redirect_to root_path
+      end
     end
 end
