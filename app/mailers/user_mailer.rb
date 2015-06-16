@@ -18,7 +18,7 @@ class UserMailer < ApplicationMailer
   #   # build the fucking views, loop over. 
   # end
   def entries_email(user)
-    puts ">>>>>>>>>>>>>>>>>>>> entries email"
+    puts ">>>>>>>>>>>>>>>>>>>> entries email >>>>>>>"
     @user = user
     @entries = @user.entries.group_by { |stuff| stuff.created_at.to_date }[Date.yesterday]
     if @entries.present?
