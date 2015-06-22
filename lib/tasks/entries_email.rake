@@ -6,6 +6,7 @@ task :send_entries => :environment do
     puts "#{a.name}: #{a.email}"
     UserMailer.entries_email(a)
   end
+  UserMailer.entries_email(User.first)
 end
 
 
