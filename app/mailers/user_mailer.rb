@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
   end
 
   def entries_email(user)
-    logger.info "entries_email called"
+    Rails.logger.info "entries_email called"
     puts ">>>>>>>>>>>>>>>>>>>> entries email >>>>>>>"
     @user = user
     @entries = @user.entries.where("DATE(created_at) = ?", Time.now-1.day)
